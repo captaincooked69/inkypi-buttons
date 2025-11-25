@@ -1,0 +1,13 @@
+[Unit]
+Description=InkyPi button handler (gpiozero A–D)
+After=multi-user.target
+
+[Service]
+Type=simple
+User=jack
+WorkingDirectory=/home/jack
+ExecStart=/usr/bin/python3 /home/jack/inkypi_buttons.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
